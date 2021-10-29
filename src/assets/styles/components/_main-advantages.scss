@@ -1,0 +1,38 @@
+.main-advantages {
+  margin-bottom: 60px;
+  &__list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      margin: 0 0 20px;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &__title{
+    margin-bottom: 65px;
+  }
+  &__ico {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 166px;
+    height: 166px;
+    margin-bottom: 15px;
+  }
+  &__caption {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__hidden{
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+}

@@ -1,0 +1,25 @@
+.main-produce{
+  overflow: hidden;
+  margin-bottom: 80px;
+  &__wrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+  &__overlay{
+    background: #E3EAF1;
+    border-radius: 5px;
+    width: calc(100% + 320px);
+    margin-left: -160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+  &__title{
+    margin-bottom: 45px;
+  }
+}
