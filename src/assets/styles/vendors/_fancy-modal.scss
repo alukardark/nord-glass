@@ -1,3 +1,8 @@
+.fancybox-container{
+  button[disabled]{
+    display: none;
+  }
+}
 .fancy-modal {
   padding: 0;
   &__wrap {

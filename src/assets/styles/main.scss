@@ -11,10 +11,10 @@ $transition-collapse:         height .35s ease !default;
 @import "~normalize.scss";
 @import "vendors/bootstrap";
 @import "~bootstrap";
-//@import "~@fancyapps/fancybox/dist/jquery.fancybox";
-//@import 'vendors/fancy-modal';
+@import "~@fancyapps/fancybox/dist/jquery.fancybox";
+@import 'vendors/fancy-modal';
 //@import "~animate.css";
-//@import "~swiper/dist/css/swiper";
+@import "~swiper/dist/css/swiper";
 //@import "node_modules/wow.js/css/libs/animate";
 //@import "vendors/wow";
 //@import "node_modules/choices.js/public/assets/styles/choices.min";
@@ -42,7 +42,8 @@ $transition-collapse:         height .35s ease !default;
 'layout/footer',
 'layout/main-banner',
 'layout/main-about',
-'layout/main-produce'
+'layout/main-produce',
+'layout/main-documents'
 ;
 
 
