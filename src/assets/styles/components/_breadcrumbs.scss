@@ -1,0 +1,33 @@
+.breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 65px;
+  opacity: .5;
+  color: $text-color;
+  li {
+    display: inline-block;
+    span {
+      margin: 0 3px;
+    }
+    &.last-breadcrumbs {
+      a {
+        text-decoration: none;
+        pointer-events: none;
+      }
+    }
+  }
+  a {
+    color: inherit;
+  }
+}
+
+@media (max-width: $md) {
+  //.breadcrumbs{
+  //  margin-bottom: 40px;
+  //  li{
+  //    font-size: 12px;
+  //  }
+  //  a{
+  //    font-size: 12px;
+  //  }
+  //}
+}

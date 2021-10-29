@@ -1,0 +1,127 @@
+.header {
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 30px;
+  }
+  &__logo {
+    width: 176px;
+    height: 76px;
+    display: block;
+    background: url(../img/logo.png) center/contain no-repeat;
+    margin-right: 70px;
+  }
+  &__search-form {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 44px;
+
+  }
+  &__search-input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid $text-color-2;
+    border-radius: 44px;
+    padding: 0 40px 0 20px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  &__search-submit {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 19px;
+    height: 19px;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    @include bgsvg('<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5001 17.5L13.7617 13.755L17.5001 17.5ZM15.8334 8.74996C15.8334 10.6286 15.0871 12.4303 13.7588 13.7586C12.4304 15.087 10.6287 15.8333 8.75008 15.8333C6.87146 15.8333 5.06979 15.087 3.74141 13.7586C2.41303 12.4303 1.66675 10.6286 1.66675 8.74996C1.66675 6.87134 2.41303 5.06967 3.74141 3.74129C5.06979 2.4129 6.87146 1.66663 8.75008 1.66663C10.6287 1.66663 12.4304 2.4129 13.7588 3.74129C15.0871 5.06967 15.8334 6.87134 15.8334 8.74996V8.74996Z" stroke="#1EA6E3" stroke-width="2" stroke-linecap="round"/>
+</svg>
+');
+    transition: .2s ease-in-out opacity;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    margin-left: auto;
+  }
+  &__tel {
+    display: block;
+    font-weight: bold;
+    font-size: 22px;
+    color: $text-color;
+    text-decoration: none;
+    &:hover{
+      color: $text-color-hover;
+    }
+  }
+  &__address {
+    font-size: 14px;
+  }
+  &__consultation-btn {
+    width: 201px;
+    height: 48px;
+    background: $text-color-2;
+    border-radius: 44px;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: .2s ease-in-out background;
+    &:hover {
+      background: $text-color-2-dark;
+      color: #FFFFFF;
+    }
+  }
+  &__menu {
+    display: flex;
+    margin: 0;
+    li {
+      position: relative;
+      padding: 0 18px 15px;
+      margin: 0;
+      &.active {
+        a{
+          font-weight: 600;
+          color: $text-color-2;
+          pointer-events: none;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          background: $text-color-2;
+          border-radius: 4px;
+        }
+      }
+    }
+    a {
+      color: $text-color;
+      font-weight: 500;
+      font-size: 18px;
+      text-decoration: none;
+      display: block;
+      &:hover{
+        color: $text-color-hover;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,73 @@
+body {
+  color: $text-color;
+  font-family: $font-basic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+  height: 100% !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  font: inherit;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 46px;
+  margin: 40px 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 50px 0 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 50px 0 20px;
+}
+
+h4 {
+  font-size: 21px;
+  margin: 50px 0 20px;
+}
+
+@media (max-width: $lg) {
+  h1 {
+  }
+  h2 {
+  }
+  h3 {
+  }
+}
+
+@media (max-width: $md) {
+  h1 {
+  }
+  h2 {
+  }
+  h3 {
+  }
+}
+
+@media (max-width: $sm) {
+  h1 {
+  }
+  h2 {
+  }
+  h3 {
+  }
+  h4 {
+  }
+}
