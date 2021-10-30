@@ -63,7 +63,7 @@
     color: $text-color;
     text-decoration: none;
     &:hover{
-      color: $text-color-hover;
+      color: $text-color-2-dark;
     }
   }
   &__address {
@@ -71,21 +71,6 @@
   }
   &__consultation-btn {
     width: 201px;
-    height: 48px;
-    background: $text-color-2;
-    border-radius: 44px;
-    font-weight: 500;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: .2s ease-in-out background;
-    &:hover {
-      background: $text-color-2-dark;
-      color: #FFFFFF;
-    }
   }
   &__menu {
     display: flex;
@@ -119,7 +104,7 @@
       text-decoration: none;
       display: block;
       &:hover{
-        color: $text-color-hover;
+        color: $text-color-2-dark;
       }
     }
 

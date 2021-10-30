@@ -1,0 +1,58 @@
+.main-map {
+  overflow: hidden;
+  margin-bottom: 33px;
+  .ymaps-2-1-79-copyrights-pane{
+    display: none;
+  }
+  .ymaps-2-1-79-image {
+    -webkit-animation-name: floating-arrow;
+    animation-name: floating-arrow;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+  }
+  &__wrap{
+    position: relative;
+  }
+  &__init {
+    height: 600px;
+    overflow: hidden;
+    border-radius: 5px;
+    width: calc(100% + 320px);
+    margin-left: -160px;
+    position: relative;
+  }
+  &__info{
+    padding: 55px 60px 60px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: #fff;
+    width: 460px;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 46px;
+    margin-bottom: 25px;
+  }
+  &__address{
+    margin-bottom: 15px;
+  }
+  &__tel{
+    font-weight: bold;
+    font-size: 20px;
+    color: $text-color;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 18px;
+    &:hover{
+      color: $text-color-hover;
+    }
+  }
+}

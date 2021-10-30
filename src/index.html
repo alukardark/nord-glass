@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main page</title>
-    <link rel="icon" href="assets/img/favicon.ico" type="image/icon">
+    <link rel="icon" href="assets/img/favicon.png" type="image/icon">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
                                 <div class="header__address">Санкт-Петербург ул. Чугунная, 14</div>
                             </div>
 
-                            <a href="#" class="header__consultation-btn">Консультация</a>
+                            <a href="javascript:;" data-fancybox data-src="#consultation" class="header__consultation-btn consultation-btn">Консультация</a>
                         </div>
 
                     </div>
@@ -71,34 +71,44 @@
 
         <div class="main-about">
             <div class="container">
-                <div class="col-md-12">
-                    <div class="main-title">О компании</div>
-                    <div class="main-about__row">
-                        <div class="main-about__col">
-                            <div class="main-about__img"
-                                 style="background-image: url(assets/img/main-baner.jpg);"></div>
-                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title">О компании</div>
+                        <div class="main-about__row">
+                            <div class="main-about__col">
+                                <div class="main-about__img"
+                                     style="background-image: url(assets/img/main-baner.jpg);"></div>
+                            </div>
 
-                        <div class="main-about__col">
-                            <h2>Компания «Бранар»</h2>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.</p>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="main-about__col">
+                                <h2>Компания «Бранар»</h2>
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure
+                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                </blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum
+                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -1320,9 +1330,9 @@
                             <div class="main-documents__overlay"></div>
                             <div class="main-title main-documents__title">
                                 Нормативные документы
-                                <div class="main-documents__arrows">
-                                    <div class="main-documents__prev"></div>
-                                    <div class="main-documents__next"></div>
+                                <div class="slider-btn">
+                                    <div class="main-documents__prev slider-btn--prev"></div>
+                                    <div class="main-documents__next slider-btn--next"></div>
                                 </div>
                             </div>
 
@@ -1374,7 +1384,6 @@
                             </div>
 
 
-
                         </div>
 
                     </div>
@@ -1382,7 +1391,160 @@
             </div>
         </div>
 
-        <div class="" style="height: 2000px; background: gray;"></div>
+        <div class="main-requirements">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title">Требования к оформлению</div>
+                        <div class="main-requirements__subscription">(чертежей, шаблонов, замеров гнутого стекла)</div>
+
+                        <ul class="main-requirements__list no-markers grid">
+                            <li>Все чертежи должны иметь читаемый вид и не возникало возможности двоякого толкования.
+                            </li>
+                            <li>Если изделие имеет вырезы под фурнитуру, то желательно в чертеже присутствие
+                                увеличенного и образмеренного изображения выреза.
+                            </li>
+                            <li>Так как после процесса закалки стекло может иметь отклонение от плоскостности, в
+                                пределах ГОСТа, рекомендуется к заказу прикладывать «карту закалки».
+                            </li>
+                            <li>Если в чертежах не указаны предельные отклонения, это означает, что точность
+                                изготовления изделий будет определяться действующими ГОСТами.
+                            </li>
+
+                            <li>Габаритные и иные размеры указываются в миллиметрах, и быть в целых числах.</li>
+                            <li>В чертежах должны быть проставлены габаритные размеры изделия, расстояние до вырезов,
+                                габариты вырезов, радиусы сопряжений в вырезах, диаметры отверстий, расстояние от краев
+                                изделия до центра отверстия, межцентровые расстояния, оси симметрии.
+                            </li>
+                            <li>Рекомендуется выполнять все чертежи согласно ЕСКД.</li>
+                            <li>В электронных чертежах фигуры должны быть построены в дугах или отрезками, не
+                                использовать сплайн линии. Контур не должен пересекаться или накладываться один на
+                                другой, разрывы контура недопустимы. Масштаб 1:1.
+                            </li>
+
+                            <li>Если в чертежах не указаны предельные отклонения, это означает, что точность
+                                изготовления изделий будет определяться действующими ГОСТами.
+                            </li>
+                            <li>Так как после процесса закалки стекло может иметь отклонение от плоскостности, в
+                                пределах ГОСТа, рекомендуется к заказу прикладывать «карту закалки».
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-works works">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-works__wrap">
+                            <div class="main-works__overlay"></div>
+                            <div class="main-title main-works__title">
+                                Наши работы
+                                <a href="#">Все работы</a>
+                            </div>
+
+                            <div class="works__list no-markers">
+                                <a href="#" class="works__item">
+                                    <div class="works__img"
+                                         style="background-image: url(assets/img/works/1.jpg);"></div>
+                                    <div class="works__caption">Ограждения и балконы</div>
+                                </a>
+
+                                <a href="#" class="works__item">
+                                    <div class="works__img"
+                                         style="background-image: url(assets/img/works/2.jpg);"></div>
+                                    <div class="works__caption">Алюминиевые перегородки</div>
+                                </a>
+
+                                <a href="#" class="works__item">
+                                    <div class="works__img"
+                                         style="background-image: url(assets/img/works/1.jpg);"></div>
+                                    <div class="works__caption">Частный дом</div>
+                                </a>
+
+                                <a href="#" class="works__item">
+                                    <div class="works__img"
+                                         style="background-image: url(assets/img/works/1.jpg);"></div>
+                                    <div class="works__caption">Входные группы</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title main-clients__title">
+                            Наши клиенты
+                            <div class="slider-btn">
+                                <div class="main-clients__prev slider-btn--prev"></div>
+                                <div class="main-clients__next slider-btn--next"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/1.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/2.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/3.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/4.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/1.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/2.png);"></span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="main-clients__img"
+                                          style="background-image: url(assets/img/clients/3.png);"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-map">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-map__wrap">
+                            <div id="map" class="main-map__init"></div>
+
+
+                            <div class="main-map__info">
+                                <div class="main-map__title">Контакты</div>
+                                <div class="main-map__address">Санкт-Петербург ул. Чугунная, дом 14</div>
+                                <a href="tel:8 (888) 333 22 22" class="main-map__tel">8 (888) 333 22 22</a>
+                                <a href="javascript:;" data-fancybox data-src="#consultation" class="consultation-btn main-map__consultation-btn">Консультация</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
@@ -1391,14 +1553,61 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="footer__row">
+                        <ul class="footer__menu no-markers">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Наши клиенты</a></li>
+                            <li><a href="#">Наше производство</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
 
+                        <div class="footer__block">
+                            <div class="footer__address">
+                                Санкт-Петербург
+                                ул.&nbsp;Чугунная, дом&nbsp;14
+                            </div>
+                            <div class="footer__box">
+                                <a href="tel:8 (888) 333 22 22" class="footer__tel">8 (888) 333 22 22</a>
+                                <a href="javascript:;" data-fancybox data-src="#consultation"
+                                   class="consultation-btn footer__consultation-btn">Консультация</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__row">
+                        <div class="footer__copy">
+                            ©2021 ООО "Бранар"
+                        </div>
+                        <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+                        <div class="footer__development">
+                            Разработка и продвижение <a target="_blank" href="//i-complex.ru">i-complex.ru</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
+
+<div data-toolbar="false" style="display: none;" id="consultation" class="fancy-modal animated-modal">
+    <div class="fancy-modal__wrap">
+        <div class="fancy-modal__title">Заказать консультацию</div>
+
+        <form action="">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <input type="submit" placeholder="Отправить">
+        </form>
+        <div class="fancy-modal__personal-data">Отправляя заявку, вы соглашаетесь на <a href="#">обработку персональных данных</a></div>
+
+    </div>
+
+    <div data-fancybox-close class="fancy-modal__close"></div>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
 </body>
 </html>

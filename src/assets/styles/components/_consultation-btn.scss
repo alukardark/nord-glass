@@ -1,0 +1,18 @@
+.consultation-btn {
+  width: 221px;
+  height: 48px;
+  background: $text-color-2;
+  border-radius: 44px;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: .2s ease-in-out background;
+  &:hover {
+    background: $text-color-2-dark;
+    color: #FFFFFF;
+  }
+}

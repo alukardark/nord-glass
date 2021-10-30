@@ -1,0 +1,14 @@
+.main-clients {
+  padding: 60px 0 105px;
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    height: 94px;
+  }
+
+}

@@ -1,25 +1,16 @@
 import '../styles/main.scss'
-
 window.$ = window.jQuery = require('jquery');
-// import * as $ from 'jquery';
-// import 'bootstrap';
 require("@fancyapps/fancybox");
-// require('./filter.js');
-// require('./forms.js');
-
-// require('masonry-layout');
-// var Masonry = require('masonry-layout');
+require('./map.js');
+import Inputmask from "inputmask";
 import Masonry from 'masonry-layout';
 import Swiper from 'Swiper';
 
-
 document.querySelectorAll('.grid').forEach(function (el) {
-        new Masonry( el, {
-
-    });
+    new Masonry(el, {});
 });
 
-var certificatesSwiper = new Swiper('.main-documents .swiper-container', {
+new Swiper('.main-documents .swiper-container', {
     loop: true,
     spaceBetween: 44,
     slidesPerView: 5,
@@ -46,4 +37,48 @@ var certificatesSwiper = new Swiper('.main-documents .swiper-container', {
             slidesPerView: 1,
         }
     },
+});
+new Swiper('.main-clients .swiper-container', {
+    loop: true,
+    spaceBetween: 53,
+    slidesPerView: 7,
+    speed: 600,
+    navigation: {
+        nextEl: '.main-clients__next',
+        prevEl: '.main-clients__prev',
+    },
+    breakpoints: {
+        1489: {
+            spaceBetween: 53,
+            slidesPerView: 4,
+        },
+        989: {
+            spaceBetween: 53,
+            slidesPerView: 3,
+        },
+        767: {
+            spaceBetween: 53,
+            slidesPerView: 2,
+        },
+        575: {
+            spaceBetween: 53,
+            slidesPerView: 1,
+        }
+    },
+});
+
+$('[data-fancybox]').fancybox({
+    autoFocus: false
+});
+
+Inputmask({"mask": "+7(999) 999-9999"}).mask("input[type='tel']");
+
+$(window).on('load', function () {
+    // $('.wpcf7-form button').click(function (e) {
+    //     $(this).addClass('loading');
+    // });
+
+    // document.addEventListener('wpcf7submit', function (event) {
+    //     $('.wpcf7-form button').removeClass('loading');
+    // }, false);
 });

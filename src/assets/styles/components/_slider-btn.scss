@@ -1,0 +1,89 @@
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 110px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  &--prev {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 19.8569L2 10.8569L11 1.85693" stroke="#222222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    width: 50%;
+    height: 100%;
+    border-radius: 1px;
+    position: relative;
+    transition: .2s ease-in-out opacity, .2s ease-in-out border-bottom;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.4);
+    &:after {
+      transition: .2s ease-in-out opacity;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 19.8569L2 10.8569L11 1.85693" stroke="#1EA6E3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    }
+    &:hover {
+      border-bottom-color: $text-color-2;
+      &:after {
+        opacity: 1;
+      }
+
+    }
+  }
+  &--next {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L11 11L2 20" stroke="#222222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    width: 50%;
+    height: 100%;
+    border-radius: 1px;
+    position: relative;
+    transition: .2s ease-in-out opacity, .2s ease-in-out border-bottom;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.4);
+    &:after {
+      transition: .2s ease-in-out opacity;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L11 11L2 20" stroke="#1EA6E3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    }
+    &:hover {
+      border-bottom-color: $text-color-2;
+      &:after {
+        opacity: 1;
+      }
+
+    }
+  }
+
+
+}

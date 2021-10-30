@@ -1,46 +1,21 @@
-.main-documents {
-  overflow: hidden;
-  &__title {
-    margin-bottom: 50px;
-  }
-  .swiper-container {
-    width: calc(100% + 60px);
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: -30px;
-  }
-  &__wrap {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 145px;
-  }
-  &__overlay {
-    background: #E3EAF1;
-    border-radius: 5px;
-    width: calc(100% + 320px);
-    margin-left: -160px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: -1;
-  }
-  .swiper-slide {
-    width: 20%;
-    //padding: 23px;
-
+.works{
+  &__list {
+    display: flex;
+    justify-content: space-between;
   }
   &__item {
-    //width: 250px;
+    width: 23.7%;
+    display: block;
     text-decoration: none;
     font-size: 22px;
     line-height: 1.2;
     color: $text-color;
+    &:last-of-type{
+      margin-right: 0;
+    }
     &:hover {
       color: $text-color-2;
-      .main-documents__img {
+      .works__img {
         box-shadow: 0px 19px 40px rgba(90, 163, 196, 0.4);
         &:before, &:after {
           opacity: 1;
@@ -54,7 +29,7 @@
     overflow: hidden;
     width: 100%;
     //max-width: 253px;
-    height: 374px;
+    height: 415px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -68,12 +43,12 @@
       left: 0px;
       bottom: 0;
       width: 100%;
-      height: 140px;
+      height: 154px;
       background-position: left bottom;
       background-repeat: no-repeat;
       background-size: contain;
-      @include bgsvg('<svg width="140" height="141" viewBox="0 0 140 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0L140 141H5C2.23858 141 0 138.761 0 136V0Z" fill="#1ED7E3" fill-opacity="0.7"/>
+      @include bgsvg('<svg width="154" height="154" viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L154 154H5C2.23858 154 0 151.761 0 149V0Z" fill="#1ED7E3" fill-opacity="0.7"/>
 </svg>
 ');
       opacity: 0;
@@ -90,7 +65,7 @@
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: contain;
-      @include bgsvg('<svg viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+      @include bgsvg('<svg width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.9" d="M0 198H193C195.761 198 198 195.761 198 193V0L0 198Z" fill="#1EA6E3"/>
 </svg>
 ');
@@ -103,16 +78,5 @@
     margin: 25px 0px 0;
     display: block;
     max-width: 230px;
-  }
-}
-
-@media (max-width: $xl) {
-  .main-documents {
-    .swiper-container {
-      width: calc(100% + 30px);
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: -15px;
-    }
   }
 }
