@@ -12,7 +12,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 const isProduction = !isDevelopment;
 
-const htmlWebpackTemplates = ['index'];
+const htmlWebpackTemplates = ['index', 'works', 'clients'];
 
 let htmlWebpackPlugins = htmlWebpackTemplates.map(name => {
     return new HtmlWebpackPlugin({
@@ -108,7 +108,6 @@ module.exports = {
     ].concat(htmlWebpackPlugins),
     module: {
         rules: [
-
             {
                 test: /\.css$/,
                 use: cssLoaders()
@@ -134,7 +133,6 @@ module.exports = {
                             esModule: false
                         },
                     },
-
                 ]
             },
             {
@@ -148,7 +146,6 @@ module.exports = {
                             publicPath: '../fonts/',
                         },
                     },
-
                 ]
             },
             {

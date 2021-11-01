@@ -33,7 +33,7 @@
       //  //fill: transparent;
       //  //stroke: #fff;
       //}
-      svg{
+      svg:not(.glass-edge-processing):not(.entrance-groups){
         *{
           //filter: brightness(0) invert(1);
           //stroke: #fff;
@@ -55,6 +55,29 @@
           fill: transparent;
         }
 
+      }
+      .entrance-groups{
+        &>path{
+          &:nth-of-type(1){
+            fill: #fff;
+          }
+          &:nth-of-type(3){
+            fill: #fff;
+          }
+        }
+
+      }
+      .glass-edge-processing{
+        rect{
+          stroke: #fff;
+        }
+        &>path{
+          fill: #fff;
+          &:last-of-type{
+            stroke: #fff;
+            fill: transparent;
+          }
+        }
       }
     }
     &:first-of-type{

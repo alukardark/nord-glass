@@ -1,7 +1,9 @@
-.works{
+.works {
+  padding-bottom: 100px;
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__item {
     width: 23.7%;
@@ -10,7 +12,8 @@
     font-size: 22px;
     line-height: 1.2;
     color: $text-color;
-    &:last-of-type{
+    margin-bottom: 90px;
+    &:last-of-type {
       margin-right: 0;
     }
     &:hover {
@@ -22,6 +25,11 @@
           transform: translateY(0px);
         }
       }
+    }
+    &--hidden {
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
   }
   &__img {
@@ -67,7 +75,10 @@
       background-size: contain;
       @include bgsvg('<svg width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.9" d="M0 198H193C195.761 198 198 195.761 198 193V0L0 198Z" fill="#1EA6E3"/>
+<path d="M133 155H167" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M158 143L170 154.5L158 166" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+
 ');
       opacity: 0;
       transform: translateY(25px);
@@ -77,6 +88,11 @@
   &__caption {
     margin: 25px 0px 0;
     display: block;
-    max-width: 230px;
+    //max-width: 230px;
+  }
+}
+
+@media (max-width: $xl) {
+  .works {
   }
 }

@@ -145,22 +145,22 @@ a {
 }
 
 input::-webkit-input-placeholder {
-  color: $text-color;
+  color: $text-color-hover;
   transition: opacity 0.3s ease;
 }
 
 input::-moz-placeholder {
-  color: $text-color;
+  color: $text-color-hover;
   transition: opacity 0.3s ease;
 }
 
 input:-moz-placeholder {
-  color: $text-color;
+  color: $text-color-hover;
   transition: opacity 0.3s ease;
 }
 
 input:-ms-input-placeholder {
-  color: $text-color;
+  color: $text-color-hover;
   transition: opacity 0.3s ease;
 }
 

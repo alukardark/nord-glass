@@ -3,7 +3,7 @@
   &__title {
     margin-bottom: 50px;
   }
-  .swiper-container {
+  .swiper {
     width: calc(100% + 60px);
     padding-left: 30px;
     padding-right: 30px;
@@ -28,7 +28,7 @@
     z-index: -1;
   }
   .swiper-slide {
-    width: 20%;
+    //width: 20%;
     //padding: 23px;
 
   }
@@ -53,7 +53,7 @@
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
-    //max-width: 253px;
+    max-width: 253px;
     height: 374px;
     background-repeat: no-repeat;
     background-position: center;
@@ -90,9 +90,12 @@
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: contain;
-      @include bgsvg('<svg viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+      @include bgsvg('<svg width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.9" d="M0 198H193C195.761 198 198 195.761 198 193V0L0 198Z" fill="#1EA6E3"/>
+<path d="M131 150H165" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M148 133L148 167" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+
 ');
       opacity: 0;
       transform: translateY(25px);

@@ -1,60 +1,106 @@
-.pagination{
+.pagination {
   margin-top: 40px;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  li{
+  li {
     overflow: hidden;
     margin-right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    &:last-of-type{
+    &:last-of-type {
       margin-right: 0;
     }
   }
-  a, span{
+  a, span {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     background-color: transparent;
-    transition: .2s ease-in-out background, .2s ease-in-out color, .3s ease-in-out opacity;
+    transition: .2s ease-in-out color;
     border-radius: 3px;
     width: 38px;
     height: 38px;
     font-weight: bold;
     font-size: 20px;
-    color: #000000;
-    &:hover{
-      //background: #24242D;
-      //color: #fff;
-      opacity: .6;
+    text-decoration: none;
+    color: $text-color;
+    position: relative;
+    &:hover {
+      //opacity: .6;
+      color: $text-color-2-dark;
     }
-    &.active{
-      background: #24242D;
+    &.active {
+      background: $text-color-2;
       color: #fff;
       opacity: 1;
       pointer-events: none;
     }
   }
-  a.pagination__next, span.pagination__next{
-    //background: url(../img/arrow-black.svg) center/10px 18px no-repeat;
+  a.pagination__next, span.pagination__next {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 22px;
+    transition: .2s ease-in-out opacity;
+    @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L11 11L2 20" stroke="#222222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    &:after {
+      transition: .2s ease-in-out opacity;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L11 11L2 20" stroke="#1EA6E3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    }
     &:hover{
+      &:after {
+        opacity: 1;
+      }
     }
   }
-  a.pagination__prev, span.pagination__prev{
-    transform: rotate(180deg);
-    //background: url(../img/arrow-black.svg) center/10px 18px no-repeat;
+  a.pagination__prev, span.pagination__prev {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 22px;
+    @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 19.8569L2 10.8569L11 1.85693" stroke="#222222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    &:after {
+      transition: .2s ease-in-out opacity;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include bgsvg('<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 19.8569L2 10.8569L11 1.85693" stroke="#1EA6E3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+    }
     &:hover{
+      &:after {
+        opacity: 1;
+      }
     }
   }
 }
 
-@media (max-width: $md) {
-    .pagination{
-      margin-top: 30px;
-    }
-}

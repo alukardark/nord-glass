@@ -18,6 +18,7 @@
   &__wrap{
     position: relative;
   }
+
   &__init {
     height: 600px;
     overflow: hidden;
@@ -52,7 +53,7 @@
     display: block;
     margin-bottom: 18px;
     &:hover{
-      color: $text-color-hover;
+      color: $text-color-2-dark;
     }
   }
 }
