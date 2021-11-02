@@ -1,0 +1,56 @@
+.gallery {
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 95px;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    width: 23.7%;
+    height: 222px;
+    display: block;
+    margin-right: 1.7%;
+    margin-bottom: 1.7%;
+    &:nth-of-type(4n){
+      margin-right: 0;
+    }
+  }
+  &__img {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    transition: .2s ease-in-out box-shadow;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      width: 100%;
+      height: 198px;
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: translate(25px, 25px);
+      @include bgsvg('<svg width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.9" d="M0 198H195C196.657 198 198 196.657 198 195V0L0 198Z" fill="#1EA6E3"/>
+<path d="M131.5 150.5H148.5H165" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M148.5 133L148.5 167" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+      transition: .3s ease-in-out opacity, .3s ease-in-out transform;
+    }
+    &:hover{
+      &:after{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

@@ -62,7 +62,13 @@ input[type='number'] {
 
 img {
   max-width: 100%;
-  margin: 20px 0;
+  margin: 55px 0;
+  display: block;
+  &.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 6px;
+  }
 }
 
 img::selection {
@@ -89,12 +95,13 @@ ul {
     margin-bottom: 20px;
   }
 }
+
 ul:not(.no-markers) {
   li {
     position: relative;
     padding-left: 45px;
     margin-bottom: 20px;
-    &:last-of-type{
+    &:last-of-type {
       margin-bottom: 0;
     }
     &:before {
@@ -118,8 +125,8 @@ ol {
     display: table;
     counter-increment: item;
     position: relative;
-    margin-bottom: 20px;
-    &:last-of-type{
+    margin-bottom: 15px;
+    &:last-of-type {
       margin-bottom: 0;
     }
     &:before {
@@ -129,6 +136,30 @@ ol {
       color: $text-color-2;
       font-weight: bold;
       font-size: 24px;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  min-width: 400px;
+  tr {
+    &:first-of-type {
+      border-bottom: 2px solid $text-color-2;
+      td {
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+    &:nth-of-type(2n+3) {
+      background: #F3F3F3
+    }
+    td {
+      padding: 13px 9px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1.2;
     }
   }
 }
@@ -184,8 +215,7 @@ input:focus:-ms-input-placeholder {
   transition: opacity 0.3s ease;
 }
 
-
-input[type="search"]{
+input[type="search"] {
   box-sizing: border-box;
 }
 

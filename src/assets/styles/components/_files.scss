@@ -1,0 +1,100 @@
+.files {
+  border: 2px solid #E3EAF1;
+  border-radius: 5px;
+  padding: 25px 20px 35px;
+  &__list {
+    max-width: 750px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+      max-width: 300px;
+      width: 100%;
+      text-decoration: none;
+      margin-bottom: 30px;
+      position: relative;
+      display: block;
+      line-height: 1.25;
+      padding-right: 45px;
+      transition: .2s ease-in-out opacity;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:hover {
+        .files__title {
+          color: $text-color-2-dark;
+        }
+        &:after {
+          opacity: 0;
+        }
+        &:before {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include bgsvg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="36" height="36" rx="3" fill="#E3EAF1"/>
+<path d="M27 21V25C27 25.5304 26.7893 26.0391 26.4142 26.4142C26.0391 26.7893 25.5304 27 25 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13 16L18 21L23 16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 21V9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+        opacity: 1;
+        transition: .2s ease-in-out opacity;
+      }
+      &:before {
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include bgsvg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="36" height="36" rx="3" fill="#0688C2"/>
+<path d="M27 21V25C27 25.5304 26.7893 26.0391 26.4142 26.4142C26.0391 26.7893 25.5304 27 25 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V21" stroke="#E3EAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13 16L18 21L23 16" stroke="#E3EAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 21V9" stroke="#E3EAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+');
+        opacity: 0;
+        transition: .2s ease-in-out opacity;
+      }
+    }
+  }
+
+  &__head {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #9EA7B0;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $text-color;
+    transition: .2s ease-in-out color;
+  }
+
+  &__size {
+    color: $text-color-2;
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+

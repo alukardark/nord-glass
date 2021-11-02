@@ -1,0 +1,75 @@
+form {
+  .wpcf7-form-control-wrap {
+    margin: 0 0 35px;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .wpcf7-not-valid-tip {
+    margin-top: 5px;
+    color: rgba(31, 55, 77, 0.9);
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+  }
+  .wpcf7-not-valid {
+    border-bottom-color: #ee2323  !important;
+  }
+  .wpcf7-response-output {
+    border: none !important;
+    font-size: 12px !important;
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+    color: rgba(31, 55, 77, 0.9);
+    line-height: 1.2;
+
+  }
+  .wpcf7 .ajax-loader {
+    display: none !important;
+  }
+  &.wpcf7-form.sent {
+    .wpcf7-response-output {
+      color: white;
+      font-size: 1em !important;
+    }
+  }
+
+  button{
+    position: relative;
+    &:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: .1s ease-in-out opacity, .1s ease-in-out visibility;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include bgsvg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+      <circle cx="50" cy="50" r="40" stroke="#1EA6E3" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+      <circle cx="50" cy="50" r="40" stroke="#ffffff" fill="none" stroke-width="10" stroke-linecap="round">
+      <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+      <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate>
+      </circle>
+      </svg>
+');
+
+    }
+    &.loading {
+      color: transparent;
+      pointer-events: none;
+      cursor: default;
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+

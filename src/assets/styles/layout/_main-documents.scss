@@ -77,7 +77,7 @@
 </svg>
 ');
       opacity: 0;
-      transform: translateY(25px);
+      transform: translate(-25px, 25px);
       transition: .3s ease-in-out opacity, .3s ease-in-out transform;
     }
     &:after {
@@ -98,7 +98,7 @@
 
 ');
       opacity: 0;
-      transform: translateY(25px);
+      transform: translate(25px, 25px);
       transition: .3s ease-in-out opacity .2s, .3s ease-in-out transform .2s;
     }
   }

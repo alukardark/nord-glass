@@ -1,0 +1,27 @@
+.produce-inner {
+  padding:  0 0 63px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+  &__cont {
+    width: 66%;
+    & > * {
+      &:first-child {
+        margin-top: 0 !important;
+      }
+    }
+  }
+  &__aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
+    width: 342px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+}

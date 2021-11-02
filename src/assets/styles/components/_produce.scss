@@ -6,8 +6,7 @@
     width: 20%;
     height: 110px;
     background: #FFFFFF;
-    border-left: 1px solid #EAEEF0;
-    border-top: 1px solid #EAEEF0;
+    border: 1px solid #EAEEF0;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -97,6 +96,9 @@
   }
   &__title{
     margin-left: 22px;
+  }
+  &--inner{
+    padding-bottom: 60px;
   }
 }
 

@@ -95,17 +95,16 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    text-align: center;
     input[type='text'], input[type='tel'], input[type='email'] {
       border-bottom: 2px solid #1EA6E3;
-      margin-bottom: 40px;
       font-weight: normal;
       font-size: 16px;
       width: 100%;
       padding: 6px 0;
     }
-    input[type='submit'] {
+    input[type='submit'], button {
       margin-top: 10px;
-
       width: 260px;
       height: 62px;
       background: $text-color-2;
@@ -117,11 +116,14 @@
       justify-content: center;
       color: #FFFFFF;
       text-decoration: none;
-      transition: .2s ease-in-out background;
+      transition: .2s ease-in-out background, .2s ease-in-out color;
       margin-bottom: 18px;
       &:hover {
         background: $text-color-2-dark;
       }
+    }
+    .wpcf7-response-output{
+      font-size: 14px !important;
     }
   }
   &__personal-data {

@@ -9,7 +9,6 @@
     margin-bottom: 65px;
   }
   &__list {
-
     li{
       width: 25%;
       position: relative;
@@ -17,6 +16,7 @@
       margin-bottom: 60px;
       line-height: 1.2;
       padding-right: 25px;
+      float: left;
       &:before {
         content: "";
         width: 27px;

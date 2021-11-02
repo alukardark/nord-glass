@@ -1,0 +1,73 @@
+.form-questions {
+  border-radius: 5px;
+  display: flex;
+  background: #E3EAF1 url(../img/form-questions.png) center right/contain no-repeat;
+  padding: 70px 120px 30px ;
+  &__info {
+    max-width: 400px;
+    margin-right: 90px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 85%;
+  }
+  form {
+    width: 100%;
+    max-width: 400px;
+    input[type='text'], input[type='tel'], input[type='email'] {
+      border-bottom: 2px solid $text-color-2;
+      font-weight: normal;
+      font-size: 16px;
+      width: 100%;
+      padding: 6px 0;
+      background: transparent;
+    }
+    input[type='submit'], button {
+      width: 170px;
+      height: 48px;
+      background: $text-color-2;
+      border-radius: 44px;
+      font-weight: 500;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: .2s ease-in-out background, .2s ease-in-out color;
+      &:hover {
+        background: $text-color-2-dark;
+      }
+    }
+  }
+  &__personal-data {
+    max-width: 200px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #1F374D;
+    opacity: 0.9;
+    a {
+      color: #1F374D;
+      &:hover {
+        color: #0688C2;
+        text-decoration-color: transparent;
+      }
+    }
+  }
+  &__submit-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    margin-bottom: 18px;
+  }
+}

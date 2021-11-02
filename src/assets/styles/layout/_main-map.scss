@@ -21,11 +21,19 @@
 
   &__init {
     height: 600px;
+    //overflow: hidden;
+    //border-radius: 5px;
+    //width: calc(100% + 320px);
+    //margin-left: -160px;
+    position: relative;
+
+  }
+  &__cont{
     overflow: hidden;
     border-radius: 5px;
     width: calc(100% + 320px);
     margin-left: -160px;
-    position: relative;
+
   }
   &__info{
     padding: 55px 60px 60px;

@@ -3,7 +3,7 @@ import '../styles/main.scss'
 window.$ = window.jQuery = require('jquery');
 require("@fancyapps/fancybox");
 
-if(document.querySelector('#map') ){
+if (document.querySelector('#map')) {
     require('./map.js');
 }
 
@@ -12,13 +12,26 @@ import Masonry from 'masonry-layout';
 import Swiper from 'swiper/swiper-bundle';
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import SimpleBar from 'simplebar';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
-document.querySelectorAll('.grid').forEach(function (el) {
-    new Masonry(el, {});
+
+
+
+
+window.onload = function() {
+    document.querySelectorAll('.grid').forEach(function (el) {
+        new Masonry(el, {});
+    });
+};
+
+
+$(window).on('load', function () {
+
 });
+
 
 new Swiper('.main-documents .swiper', {
     loop: true,
@@ -85,28 +98,22 @@ $('[data-fancybox]').fancybox({
 Inputmask({"mask": "+7(999) 999-9999"}).mask("input[type='tel']");
 
 $(window).on('load', function () {
-    // $('.wpcf7-form button').click(function (e) {
-    //     $(this).addClass('loading');
-    // });
+    $('.wpcf7-form button').click(function (e) {
+        $(this).addClass('loading');
+    });
 
-    // document.addEventListener('wpcf7submit', function (event) {
-    //     $('.wpcf7-form button').removeClass('loading');
-    // }, false);
+    document.addEventListener('wpcf7submit', function (event) {
+        $('.wpcf7-form button').removeClass('loading');
+    }, false);
 });
 
-
-
-
-
-
-
-if(document.querySelector('.main-about') ){
+if (document.querySelector('.main-about')) {
     gsap.from(".main-about__img", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-about__col",
             endTrigger: ".main-about__col",
-            scrub : 2,
+            scrub: 2,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -115,13 +122,13 @@ if(document.querySelector('.main-about') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-about__col') ){
+if (document.querySelector('.main-about__col')) {
     gsap.from(".main-about__col:nth-of-type(2)", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-about__col",
             endTrigger: ".main-about__col",
-            scrub : 2,
+            scrub: 2,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -130,13 +137,13 @@ if(document.querySelector('.main-about__col') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-produce') ){
+if (document.querySelector('.main-produce')) {
     gsap.from(".main-produce__overlay", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-produce__overlay",
             endTrigger: ".main-produce__overlay",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -145,13 +152,13 @@ if(document.querySelector('.main-produce') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-documents') ){
+if (document.querySelector('.main-documents')) {
     gsap.from(".main-documents__overlay", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-documents__overlay",
             endTrigger: ".main-documents__overlay",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -160,13 +167,13 @@ if(document.querySelector('.main-documents') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-works') ){
+if (document.querySelector('.main-works')) {
     gsap.from(".main-works__overlay", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-works__overlay",
             endTrigger: ".main-works__overlay",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -175,13 +182,13 @@ if(document.querySelector('.main-works') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-advantages') ){
+if (document.querySelector('.main-advantages')) {
     gsap.from(".main-advantages__list", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-advantages__list",
             endTrigger: ".main-advantages__list",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -189,13 +196,13 @@ if(document.querySelector('.main-advantages') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-requirements') ){
+if (document.querySelector('.main-requirements')) {
     gsap.from(".main-requirements__list", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-requirements__list",
             endTrigger: ".main-requirements__list",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -203,13 +210,13 @@ if(document.querySelector('.main-requirements') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-clients') ){
+if (document.querySelector('.main-clients')) {
     gsap.from(".main-clients .swiper", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-clients .swiper",
             endTrigger: ".main-clients .swiper",
-            scrub : 1,
+            scrub: 1,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -217,13 +224,13 @@ if(document.querySelector('.main-clients') ){
         opacity: "0",
     });
 }
-if(document.querySelector('.main-map') ){
+if (document.querySelector('.main-map')) {
     gsap.from(".main-map__info", {
         duration: 100,
         scrollTrigger: {
             trigger: ".main-map",
             endTrigger: ".main-map",
-            scrub : 1.5,
+            scrub: 1.5,
             start: "20px 100%",
             end: "120px 100%",
         },
@@ -231,10 +238,39 @@ if(document.querySelector('.main-map') ){
     });
 }
 
+if (document.querySelector('.main-map')) {
+    gsap.from(".main-map__init", {
+        duration: 100,
+        scrollTrigger: {
+            trigger: ".main-map",
+            endTrigger: ".main-map",
+            scrub: 1.5,
+            start: "20px 100%",
+            end: "120px 100%",
+        },
+        scale: 1.5,
+    });
+}
+
+$("img[title]").each(function () {
+    $(this).after($('<span class="img-desc">').html($(this).attr('title')));
+});
 
 
+$('a[href*="tel:"]').each(function(){
+    $(this).attr('href', 'tel:'+$(this).text().replace(/\s/g, ''));
+});
 
+// $('.inner-page table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
+// document.querySelectorAll('.scrollbar').forEach(el => {
+//     new SimpleBar(el, {
+//         autoHide: false
+//     });
+// });
 
-
-
-
+$('table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
+document.querySelectorAll('.scrollbar').forEach(el => {
+    new SimpleBar(el, {
+        autoHide: false
+    });
+});
