@@ -17,11 +17,7 @@ import SimpleBar from 'simplebar';
 gsap.registerPlugin(ScrollTrigger);
 
 
-
-
-
-
-window.onload = function() {
+window.onload = function () {
     document.querySelectorAll('.grid').forEach(function (el) {
         new Masonry(el, {});
     });
@@ -252,25 +248,34 @@ if (document.querySelector('.main-map')) {
     });
 }
 
+
+
+
+$("img[title].alignleft").each(function () {
+    $(this).wrapAll($('<span class="alignleft">'))
+});
+$("img[title].alignright").each(function () {
+    $(this).wrapAll($('<span class="alignright">'))
+});
+$("img[title].aligncenter").each(function () {
+    $(this).wrapAll($('<span class="aligncenter">'))
+});
+
 $("img[title]").each(function () {
     $(this).after($('<span class="img-desc">').html($(this).attr('title')));
 });
 
 
-$('a[href*="tel:"]').each(function(){
-    $(this).attr('href', 'tel:'+$(this).text().replace(/\s/g, ''));
+
+
+$('a[href*="tel:"]').each(function () {
+    $(this).attr('href', 'tel:' + $(this).text().replace(/\s/g, ''));
 });
 
-// $('.inner-page table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
-// document.querySelectorAll('.scrollbar').forEach(el => {
-//     new SimpleBar(el, {
-//         autoHide: false
-//     });
-// });
-
-$('table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
+$('.inner-page table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
 document.querySelectorAll('.scrollbar').forEach(el => {
     new SimpleBar(el, {
         autoHide: false
     });
 });
+

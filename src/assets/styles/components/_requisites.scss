@@ -1,0 +1,29 @@
+.requisites {
+  margin-bottom: 55px;
+  max-width: 610px;
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #9EA7B0;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 11px;
+    span {
+      line-height: 1.25;
+      font-weight: normal;
+      font-size: 16px;
+      width: 64%;
+      &:first-of-type {
+        font-weight: 600;
+        font-size: 14px;
+        width: 36%;
+        padding-right: 15px;
+      }
+    }
+  }
+}

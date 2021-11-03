@@ -1,0 +1,115 @@
+.contacts {
+  position: relative;
+  overflow: hidden;
+  margin-top: -45px;
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+  }
+  &__text{
+    max-width: 707px;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+    &__map{
+    width: 44.3%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .ymaps-2-1-79-copyrights-pane{
+    display: none;
+  }
+  .ymaps-2-1-79-image {
+    -webkit-animation-name: floating-arrow;
+    animation-name: floating-arrow;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E3EAF1;
+    padding-bottom: 47px;
+    margin-bottom: 40px;
+  }
+  &__address {
+    line-height: 1.25;
+    margin-bottom: 26px;
+  }
+  &__tel {
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: $text-color;
+    margin-bottom: 26px;
+  }
+  &__email {
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 1.2;
+    color: $text-color;
+  }
+  &__consultation-title {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #9EA7B0;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  &__consultation {
+    background: rgba(227, 234, 241, 0.5);
+    border-radius: 5px;
+    padding: 40px 120px 50px;
+    form {
+      width: 100%;
+      input[type='text'], input[type='tel'], input[type='email'] {
+        border-bottom: 2px solid #1EA6E3;
+        font-weight: normal;
+        font-size: 16px;
+        width: 100%;
+        padding: 6px 0;
+        background: transparent;
+      }
+      input[type='submit'], button {
+        margin-top: 10px;
+        width: 190px;
+        height: 48px;
+        background: #1EA6E3;
+        border-radius: 44px;
+        font-weight: 500;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: .2s ease-in-out background, .2s ease-in-out color;
+        margin-bottom: 18px;
+        &:hover {
+          background: $text-color-2-dark;
+        }
+      }
+      textarea {
+        background: transparent;
+        resize: none;
+        width: 100%;
+        height: 80px;
+        border-bottom: 2px solid #1EA6E3;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 6px 0;
+      }
+    }
+  }
+}

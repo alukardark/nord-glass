@@ -1,4 +1,4 @@
-.inner-page{
+.inner-page {
   iframe {
     border-radius: 5px;
     width: 100%;
@@ -18,7 +18,7 @@
     font-size: 14px;
     display: block;
   }
-  .important{
+  .important {
     background: rgba(227, 234, 241, 0.3);
     border: 3px solid rgba(30, 166, 227, 0.1);
     border-radius: 5px;
@@ -26,10 +26,10 @@
     display: flex;
     padding: 10px 25px;
     margin: 20px 0;
-    p{
+    p {
       color: #000;
     }
-    &:before{
+    &:before {
       content: '';
       background-position: center;
       background-repeat: no-repeat;
@@ -47,4 +47,53 @@
       margin-top: 20px;
     }
   }
+
+  .alignleft,
+  img.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 15px;
+  }
+  .alignright,
+  img.alignright {
+    display: inline;
+    float: right;
+    margin-left: 15px;
+  }
+  .aligncenter,
+  img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    &.alignleft {
+      margin: 20px 15px 20px 0;
+    }
+    &.aligncenter {
+      margin: 20px auto;
+    }
+    &.alignright {
+      margin: 20px 0 20px 15px;
+    }
+    &.alignleft, &.aligncenter, &.alignright {
+      & + .img-desc {
+        margin-top: 0;
+      }
+    }
+  }
+  .alignleft, .alignright {
+    img {
+      display: block;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  p, ul, ol, table, blockquote, h2, h3, h4, h5, h6 {
+    clear: both;
+  }
+
 }

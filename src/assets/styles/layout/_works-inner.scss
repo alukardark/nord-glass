@@ -1,11 +1,20 @@
 .works-inner {
   padding-bottom: 63px;
+
+
+
+
   &__row {
     display: flex;
     justify-content: space-between;
   }
   &__text {
     max-width: 700px;
+    &:first-of-type{
+      & > *:first-child {
+        margin-top: 0 !important;
+      }
+    }
   }
   &__img {
     background-repeat: no-repeat;

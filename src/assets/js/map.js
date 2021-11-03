@@ -42,8 +42,7 @@ import marker from '../img/marker.svg';
             }
 
 
-            onResizeFunction();
-            window.addEventListener('resize', onResizeFunction);
+
 
             function onResizeFunction() {
                 windowWidth = window.innerWidth;
@@ -63,6 +62,19 @@ import marker from '../img/marker.svg';
                     }
                 }
             }
+
+            if(document.querySelector('.main-map')){
+                onResizeFunction();
+                window.addEventListener('resize', onResizeFunction);
+            }
+
+
+            if(document.querySelector('.contacts')){
+                offsetCenter = 0.0035;
+                arr = [x- offsetCenter, y];
+                myMap.setCenter(arr);
+            }
+
 
 
         }
