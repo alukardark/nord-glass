@@ -6,8 +6,13 @@ require("@fancyapps/fancybox");
 if (document.querySelector('#map')) {
     require('./map.js');
 }
+import 'bootstrap/js/dist/collapse';
+// import 'bootstrap';
+// window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+
 
 import Inputmask from "inputmask";
+import SVGInject from "@iconfu/svg-inject";
 import Masonry from 'masonry-layout';
 import Swiper from 'swiper/swiper-bundle';
 import {gsap} from "gsap";
@@ -27,6 +32,8 @@ window.onload = function () {
 $(window).on('load', function () {
 
 });
+
+SVGInject(document.querySelectorAll(".produce img"));
 
 
 new Swiper('.main-documents .swiper', {
@@ -103,7 +110,7 @@ $(window).on('load', function () {
     }, false);
 });
 
-if (document.querySelector('.main-about')) {
+if (document.querySelector('.main-about__img')) {
     gsap.from(".main-about__img", {
         duration: 100,
         scrollTrigger: {
@@ -133,7 +140,7 @@ if (document.querySelector('.main-about__col')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-produce')) {
+if (document.querySelector('.main-produce__overlay')) {
     gsap.from(".main-produce__overlay", {
         duration: 100,
         scrollTrigger: {
@@ -148,7 +155,7 @@ if (document.querySelector('.main-produce')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-documents')) {
+if (document.querySelector('.main-documents__overlay')) {
     gsap.from(".main-documents__overlay", {
         duration: 100,
         scrollTrigger: {
@@ -163,7 +170,7 @@ if (document.querySelector('.main-documents')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-works')) {
+if (document.querySelector('.main-works__overlay')) {
     gsap.from(".main-works__overlay", {
         duration: 100,
         scrollTrigger: {
@@ -178,7 +185,7 @@ if (document.querySelector('.main-works')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-advantages')) {
+if (document.querySelector('.main-advantages__list')) {
     gsap.from(".main-advantages__list", {
         duration: 100,
         scrollTrigger: {
@@ -192,7 +199,7 @@ if (document.querySelector('.main-advantages')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-requirements')) {
+if (document.querySelector('.main-requirements__list')) {
     gsap.from(".main-requirements__list", {
         duration: 100,
         scrollTrigger: {
@@ -220,7 +227,7 @@ if (document.querySelector('.main-clients')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-map')) {
+if (document.querySelector('.main-map__info')) {
     gsap.from(".main-map__info", {
         duration: 100,
         scrollTrigger: {
@@ -234,7 +241,7 @@ if (document.querySelector('.main-map')) {
     });
 }
 
-if (document.querySelector('.main-map')) {
+if (document.querySelector('.main-map__init')) {
     gsap.from(".main-map__init", {
         duration: 100,
         scrollTrigger: {
@@ -264,8 +271,6 @@ $("img[title].aligncenter").each(function () {
 $("img[title]").each(function () {
     $(this).after($('<span class="img-desc">').html($(this).attr('title')));
 });
-
-
 
 
 $('a[href*="tel:"]').each(function () {

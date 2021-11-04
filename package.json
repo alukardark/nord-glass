@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@iconfu/svg-inject": "^1.2.3",
     "@popperjs/core": "^2.10.2",
     "animate.css": "^4.1.0",
     "bootstrap": "5.1.0",

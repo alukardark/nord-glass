@@ -1,0 +1,31 @@
+<svg width="57" height="56" viewBox="0 0 57 56" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="path-1-inside-1_128:1520" fill="white">
+                                                <rect y="4" width="30" height="49" rx="1"/>
+                                            </mask>
+                                            <rect y="4" width="30" height="49" rx="1" fill="white" stroke="white"
+                                                  stroke-width="4" mask="url(#path-1-inside-1_128:1520)"/>
+                                            <rect x="5" y="9" width="23" height="45" fill="#F2F7FA" stroke="#1EA6E3"
+                                                  stroke-width="2"/>
+                                            <mask id="path-3-inside-2_128:1520" fill="white">
+                                                <rect x="27" y="4" width="29" height="49" rx="1"/>
+                                            </mask>
+                                            <rect x="27" y="4" width="29" height="49" rx="1" fill="white" stroke="white"
+                                                  stroke-width="4" mask="url(#path-3-inside-2_128:1520)"/>
+                                            <rect x="28" y="9" width="23" height="45" fill="#F2F7FA" stroke="#1EA6E3"
+                                                  stroke-width="2"/>
+                                            <path d="M5 29L25 9" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17 22.0256L22.0256 17" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M37 52.0256L42.0256 47" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M28 21L36 13" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 34L14 25" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M32 52L51 33" stroke="#1EA6E3" stroke-width="2"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                            <rect x="21" y="28" width="3" height="8" rx="1.5" fill="#1EA6E3"/>
+                                            <rect x="32" y="28" width="3" height="8" rx="1.5" fill="#1EA6E3"/>
+                                        </svg>
