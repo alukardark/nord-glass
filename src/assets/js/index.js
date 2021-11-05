@@ -72,9 +72,9 @@ SVGInject(document.querySelectorAll(".produce img"));
 
 
 new Swiper('.main-documents .swiper', {
-    loop: true,
-    spaceBetween: 15,
-    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 20,
+    slidesPerView: 'auto',
     speed: 600,
     navigation: {
         nextEl: '.main-documents__next',
@@ -83,27 +83,36 @@ new Swiper('.main-documents .swiper', {
     breakpoints: {
         1489: {
             spaceBetween: 44,
+            loop: true,
+            slidesPerView: 5,
+        },
+        1249: {
+            spaceBetween: 44,
+            loop: true,
             slidesPerView: 5,
         },
         989: {
             spaceBetween: 44,
+            loop: true,
             slidesPerView: 4,
         },
         767: {
-            spaceBetween: 15,
-            slidesPerView: 2,
+            spaceBetween: 25,
+            loop: false,
+            slidesPerView: 4,
         },
         575: {
-            spaceBetween: 15,
-            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+            slidesPerView: 'auto',
         }
     },
 });
 
 new Swiper('.main-clients .swiper', {
-    loop: true,
+    loop: false,
     spaceBetween: 53,
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     speed: 600,
     navigation: {
         nextEl: '.main-clients__next',
@@ -112,19 +121,28 @@ new Swiper('.main-clients .swiper', {
     breakpoints: {
         1489: {
             spaceBetween: 53,
-            slidesPerView: 7,
+            loop: true,
+            slidesPerView: 5,
+        },
+        1249: {
+            spaceBetween: 53,
+            loop: true,
+            slidesPerView: 5,
         },
         989: {
             spaceBetween: 53,
-            slidesPerView: 3,
+            loop: true,
+            slidesPerView: 4,
         },
         767: {
             spaceBetween: 53,
-            slidesPerView: 2,
+            loop: false,
+            slidesPerView: 4,
         },
         575: {
             spaceBetween: 53,
-            slidesPerView: 1,
+            loop: false,
+            slidesPerView: 'auto',
         }
     },
 });
@@ -190,7 +208,7 @@ if (document.querySelector('.main-produce__overlay')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-documents__overlay')) {
+if (document.querySelector('.main-documents__wrap')) {
     gsap.from(".main-documents__overlay", {
         duration: 100,
         scrollTrigger: {

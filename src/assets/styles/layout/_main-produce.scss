@@ -35,6 +35,13 @@
     }
   }
 }
+
+@media (max-width: $xl) {
+  .main-produce {
+    margin-bottom: 55px;
+  }
+}
+
 @media (max-width: $md) {
   .main-produce {
     margin-bottom: 40px;

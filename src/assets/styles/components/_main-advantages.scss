@@ -3,3 +3,24 @@
     margin-bottom: 65px;
   }
 }
+@media (max-width: $lg) {
+  .main-advantages {
+    &__title{
+      margin-bottom: 50px;
+    }
+  }
+}
+@media (max-width: $md) {
+  .main-advantages {
+    &__title{
+      margin-bottom: 50px;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .main-advantages {
+    &__title{
+      margin-bottom: 15px;
+    }
+  }
+}

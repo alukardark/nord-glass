@@ -2,6 +2,7 @@
   overflow: hidden;
   &__title {
     margin-bottom: 50px;
+
   }
   .swiper {
     width: calc(100% + 60px);
@@ -26,11 +27,6 @@
     left: 0;
     height: 100%;
     z-index: -1;
-  }
-  .swiper-slide {
-    //width: 20%;
-    //padding: 23px;
-
   }
   &__item {
     //width: 250px;
@@ -68,7 +64,7 @@
       left: 0px;
       bottom: 0;
       width: 100%;
-      height: 140px;
+      height: 37%;
       background-position: left bottom;
       background-repeat: no-repeat;
       background-size: contain;
@@ -86,7 +82,7 @@
       right: 0px;
       bottom: 0;
       width: 100%;
-      height: 198px;
+      height: 53%;
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: contain;
@@ -109,13 +105,70 @@
   }
 }
 
-@media (max-width: $xl) {
+@media (max-width: $xxl) {
   .main-documents {
     .swiper-container {
       width: calc(100% + 30px);
       padding-left: 15px;
       padding-right: 15px;
       margin-left: -15px;
+    }
+    &__img {
+      max-width: 212px;
+      height: 308px;
+    }
+    &__caption {
+      font-size: 18px;
+    }
+    &__wrap {
+      padding-top: 80px;
+      padding-bottom: 110px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .main-documents {
+    &__wrap {
+      padding-top: 50px;
+      padding-bottom: 80px;
+    }
+    &__title {
+      span {
+        max-width: 300px;
+        display: block;
+      }
+    }
+    &__img {
+      max-width: 174px;
+      height: 258px;
+    }
+    .swiper {
+      overflow: unset;
+      width: calc(100% + 30px);
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: -15px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main-documents {
+    .swiper-slide {
+      width: 174px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-documents {
+    &__wrap {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+    &__title{
+      margin-bottom: 20px;
     }
   }
 }
