@@ -1,14 +1,14 @@
-.main-produce{
+.main-produce {
   overflow: hidden;
   margin-bottom: 80px;
-  &__wrap{
+  &__wrap {
     position: relative;
     height: 100%;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 45px;
   }
-  &__overlay{
+  &__overlay {
     background: #E3EAF1;
     border-radius: 5px;
     width: calc(100% + 320px);
@@ -19,7 +19,24 @@
     height: 100%;
     z-index: -1;
   }
-  &__title{
+  &__title {
     margin-bottom: 45px;
+  }
+}
+
+@media (max-width: $lg) {
+  .main-produce {
+    &__wrap {
+      padding-top: 45px;
+      padding-bottom: 35px;
+    }
+    .main-produce__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: $md) {
+  .main-produce {
+    margin-bottom: 40px;
   }
 }

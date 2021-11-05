@@ -40,20 +40,31 @@
                     </div>
 
                     <div class="col-md-12">
-                        <ul class="no-markers header__menu">
-                            <li class="active"><a href="#">О компании</a></li>
-                            <li><a href="#">Наше производство</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#">Наши клиенты</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="header__mobile">
+                            <div class="header__menu-wrap" >
+                                <ul class="no-markers header__menu ">
+                                    <li class="active"><a href="#">О компании</a></li>
+                                    <li><a href="#">Наше производство</a></li>
+                                    <li><a href="#">Наши работы</a></li>
+                                    <li><a href="#">Наши клиенты</a></li>
+                                    <li><a href="#">Отзывы</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+
+                                <div class="header__menu-footer">
+                                    <a class="header__menu-tel" href="tel:+7 (812) 425-35-16">+7 (812) 425-35-16</a>
+                                    <div class="header__menu-address">Санкт-Петербург ул. Чугунная, 14</div>
+                                    <a href="javascript:;" data-fancybox data-src="#consultation"
+                                       class="header__menu-consultation-btn consultation-btn">Консультация</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="d-none main-banner" style="background-image: url(assets/img/main-baner.jpg);">
+        <div class="main-banner" style="background-image: url(assets/img/main-baner.jpg);">
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-12">
@@ -72,7 +83,7 @@
             </div>
         </div>
 
-        <div class="d-none main-about">
+        <div class="main-about">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -117,7 +128,7 @@
             </div>
         </div>
 
-        <div class="d-none main-produce produce">
+        <div class="main-produce produce">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -126,8 +137,23 @@
 
                             <div class="main-title main-produce__title">Мы производим:</div>
 
-                            <ul id="flush-collapseOne"
-                                class="no-markers produce__list clearfix accordion-collapse collapse show">
+                            <div class="produce__btn-mobile">
+                                <a href="#"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#flush-collapseOne"
+                                   aria-expanded="true"
+                                   aria-controls="flush-collapseOne"
+                                >
+                                    <div class="produce__ico">
+                                        <img src="assets/img/products-icons/0.svg" alt="">
+                                    </div>
+                                    <div class="produce__title">
+                                        Производство стекла
+                                    </div>
+                                </a>
+                            </div>
+
+                            <ul id="flush-collapseOne" class="no-markers produce__list clearfix accordion-collapse collapse show">
                                 <li>
                                     <a href="#"
                                        data-bs-toggle="collapse"
@@ -199,14 +225,6 @@
                                         Резка зеркал по размерам
                                     </div>
                                 </a></li>
-                                <!--<li><a href="#">-->
-                                    <!--<div class="produce__ico">-->
-                                        <!--<img src="assets/img/products-icons/7.svg" alt="">-->
-                                    <!--</div>-->
-                                    <!--<div class="produce__title">-->
-                                        <!--Триплекс для душевых кабин-->
-                                    <!--</div>-->
-                                <!--</a></li>-->
                                 <li><a href="#">
                                     <div class="produce__ico">
                                         <img src="assets/img/products-icons/8.svg" alt="">
@@ -335,7 +353,6 @@
                                         Изготовление гнутых стекл на заказ
                                     </div>
                                 </a></li>
-
                                 <li><a href="#">
                                     <div class="produce__ico">
                                         <img src="assets/img/products-icons/51.svg" alt="">
@@ -344,14 +361,6 @@
                                         Стеклопакеты с внутренним декором
                                     </div>
                                 </a></li>
-                                <!--<li><a href="#">-->
-                                    <!--<div class="produce__ico">-->
-                                        <!--<img src="assets/img/products-icons/24.svg" alt="">-->
-                                    <!--</div>-->
-                                    <!--<div class="produce__title">-->
-                                        <!--Матовое закаленное стекло-->
-                                    <!--</div>-->
-                                <!--</a></li>-->
                                 <li><a href="#">
                                     <div class="produce__ico">
                                         <img src="assets/img/products-icons/25.svg" alt="">
@@ -384,11 +393,27 @@
                                         Стеклопакеты строительного назначения
                                     </div>
                                 </a></li>
-
                             </ul>
 
-                            <ul id="flush-collapseTwo"
-                                class="no-markers produce__list clearfix accordion-collapse collapse show">
+
+                            <div class="produce__btn-mobile">
+                                <a href="#"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#flush-collapseTwo"
+                                   aria-expanded="true"
+                                   aria-controls="flush-collapseTwo"
+                                >
+                                    <div class="produce__ico">
+                                        <img src="assets/img/products-icons/30.svg" alt="">
+                                    </div>
+                                    <div class="produce__title">
+                                        Конструкции из стекла
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <ul id="flush-collapseTwo" class="no-markers produce__list clearfix accordion-collapse collapse show">
                                 <li><a href="#"
                                        data-bs-toggle="collapse"
                                        data-bs-target="#flush-collapseTwo"
@@ -530,7 +555,7 @@
             </div>
         </div>
 
-        <div class="d-none advantages main-advantages">
+        <div class=" advantages main-advantages">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -811,7 +836,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="block" style="height: 2000px; background: gray;"></div>
 
     </div>

@@ -1,8 +1,8 @@
 .burger {
   cursor: pointer;
   position: relative;
-
   width: 35px;
+  min-width: 35px;
   height: 35px;
   background: $text-color-2;
   display: flex;
@@ -10,6 +10,7 @@
   justify-content: center;
   transition: .2s ease-in-out background;
   border-radius: 50%;
+  z-index: 102;
   &.active {
 
   }

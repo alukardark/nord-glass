@@ -44,7 +44,11 @@ h4 {
 }
 
 @media (max-width: $lg) {
+  p{
+    font-size: 14px;
+  }
   h1 {
+    font-size: 32px;
   }
   h2 {
   }
@@ -54,6 +58,7 @@ h4 {
 
 @media (max-width: $md) {
   h1 {
+
   }
   h2 {
   }
@@ -63,6 +68,7 @@ h4 {
 
 @media (max-width: $sm) {
   h1 {
+    font-size: 22px;
   }
   h2 {
   }

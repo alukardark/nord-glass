@@ -11,6 +11,7 @@
   color: #FFFFFF;
   text-decoration: none;
   transition: .2s ease-in-out background;
+
   &:hover {
     background: $text-color-2-dark;
     color: #FFFFFF;
@@ -18,9 +19,9 @@
 }
 
 @media (max-width: $xl) {
-  .consultation-btn {
-    width: 147px;
-    height: 36px;
-    font-size: 14px;
-  }
+
+}
+
+@media (max-width: $lg) {
+
 }

@@ -8,7 +8,7 @@
       text-decoration: none;
       margin: 0;
       float: left;
-      a{
+      a {
         transition: .2s ease-in-out background, .2s ease-in-out color;
         background: #FFFFFF;
         display: flex;
@@ -21,7 +21,7 @@
         padding: 5px 30px;
         height: 100%;
         width: 100%;
-        &:hover{
+        &:hover {
           background: #14C5D0;
           color: #fff;
           //svg  *{
@@ -33,87 +33,87 @@
           //  //fill: transparent;
           //  //stroke: #fff;
           //}
-          svg:not(.glass-edge-processing):not(.entrance-groups):not(.double-glazed-windows):not(.glass-floor){
-            *{
+          svg:not(.glass-edge-processing):not(.entrance-groups):not(.double-glazed-windows):not(.glass-floor) {
+            * {
               //filter: brightness(0) invert(1);
               //stroke: #fff;
               //fill: transparent;
             }
-            g>path{
+            g > path {
               stroke: #fff;
               fill: transparent;
             }
-            &>circle{
+            & > circle {
               stroke: #fff;
             }
-            &>rect{
+            & > rect {
               stroke: #fff;
               fill: transparent;
             }
-            &>path{
+            & > path {
               stroke: #fff;
               fill: transparent;
             }
 
           }
-          .entrance-groups{
-            &>path{
-              &:nth-of-type(1){
+          .entrance-groups {
+            & > path {
+              &:nth-of-type(1) {
                 fill: #fff;
               }
-              &:nth-of-type(3){
+              &:nth-of-type(3) {
                 fill: #fff;
               }
             }
 
           }
-          .glass-edge-processing{
-            rect{
+          .glass-edge-processing {
+            rect {
               stroke: #fff;
             }
-            &>path{
+            & > path {
               fill: #fff;
-              &:last-of-type{
+              &:last-of-type {
                 stroke: #fff;
                 fill: transparent;
               }
             }
           }
-          .double-glazed-windows{
-            &>rect{
+          .double-glazed-windows {
+            & > rect {
               stroke: #fff;
             }
-            &>path{
+            & > path {
               stroke: #fff;
-              &:last-of-type{
+              &:last-of-type {
                 fill: #14C5D0;
               }
             }
           }
-          .glass-floor{
-            &>rect{
+          .glass-floor {
+            & > rect {
               stroke: #fff;
             }
-            &>path{
+            & > path {
               fill: #fff;
             }
           }
         }
       }
-      svg, svg *{
+      svg, svg * {
         transition: .2s ease-in-out all;
       }
 
-      &:first-of-type{
+      &:first-of-type {
         height: 220px;
-        a{
+        a {
           pointer-events: none;
           background: $text-color-2;
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
         }
-        .produce__title{
+        .produce__title {
           font-weight: 600;
           font-size: 28px;
           color: #FFFFFF;
@@ -122,19 +122,149 @@
       }
     }
   }
-
-  &__title{
+  &__title {
     margin-left: 22px;
   }
-  &--inner{
+  &__btn-mobile {
+    display: none;
+  }
+  &--inner {
     padding-bottom: 60px;
   }
 }
 
-//@media (max-width: $xl) {
-//  .produce{
-//    &__item {
-//      width: 25%;
-//    }
-//  }
-//}
+@media (max-width: $xxl) {
+  .produce {
+    &__list {
+      li {
+        width: 25%;
+        &:first-of-type {
+          .produce__title {
+            //font-size: 24px;
+          }
+        }
+        &:not(:first-of-type) {
+          a {
+            //padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .produce {
+    &__list {
+      li {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .produce {
+    &__list {
+      margin-bottom: 50px;
+      li {
+        width: 33.33%;
+        height: 90px;
+        &:first-of-type {
+          //display: none;
+          width: 100%;
+          height: 62px;
+          a {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .produce__ico {
+              width: 44px;
+              height: 43px;
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .produce__title {
+              margin-left: 15px;
+              font-size: 22px;
+              margin-top: 0;
+            }
+          }
+        }
+        &:not(:first-of-type) {
+          a {
+
+          }
+        }
+        a {
+          font-size: 12px;
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .produce {
+    &__list {
+      margin-bottom: 0;
+      li {
+        width: 100%;
+        height: 35px;
+        border-top: none;
+        &:first-of-type {
+          display: none;
+        }
+        &:not(:first-of-type) {
+          .produce__ico {
+            display: none;
+          }
+          .produce__title {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    &__btn-mobile {
+      display: block;
+      width: 100%;
+      height: 62px;
+      border: 1px solid #EAEEF0;
+      margin-top: 25px;
+      a {
+        transition: .2s ease-in-out background, .2s ease-in-out color;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #222222;
+        line-height: 1.2;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 15px;
+        height: 100%;
+        width: 100%;
+        background: $text-color-2;
+
+      }
+      .produce__ico {
+        width: 36px;
+        height: 36px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .produce__title {
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-left: 15px;
+        font-size: 16px;
+        flex: 1;
+      }
+
+    }
+  }
+}

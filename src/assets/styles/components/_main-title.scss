@@ -1,15 +1,15 @@
-.main-title{
+.main-title {
   font-weight: bold;
   font-size: 46px;
   position: relative;
-  a{
+  a {
     font-weight: 500;
     font-size: 20px;
     color: $text-color-2;
     position: relative;
     text-decoration: none;
     margin-left: 40px;
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       left: 0;
@@ -21,11 +21,26 @@
       opacity: 1;
       transition: .2s ease-in-out all;
     }
-    &:hover{
+    &:hover {
       color: $text-color-2-dark;
-      &:after{
+      &:after {
         opacity: 0;
       }
     }
+  }
+}
+@media (max-width: $xl) {
+  .main-title {
+    font-size: 38px;
+  }
+}
+@media (max-width: $lg) {
+  .main-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: $sm) {
+  .main-title {
+    font-size: 22px;
   }
 }
