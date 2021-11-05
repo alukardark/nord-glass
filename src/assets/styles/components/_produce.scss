@@ -33,7 +33,7 @@
           //  //fill: transparent;
           //  //stroke: #fff;
           //}
-          svg:not(.glass-edge-processing):not(.entrance-groups){
+          svg:not(.glass-edge-processing):not(.entrance-groups):not(.double-glazed-windows):not(.glass-floor){
             *{
               //filter: brightness(0) invert(1);
               //stroke: #fff;
@@ -77,6 +77,25 @@
                 stroke: #fff;
                 fill: transparent;
               }
+            }
+          }
+          .double-glazed-windows{
+            &>rect{
+              stroke: #fff;
+            }
+            &>path{
+              stroke: #fff;
+              &:last-of-type{
+                fill: #14C5D0;
+              }
+            }
+          }
+          .glass-floor{
+            &>rect{
+              stroke: #fff;
+            }
+            &>path{
+              fill: #fff;
             }
           }
         }

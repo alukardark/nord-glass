@@ -16,3 +16,11 @@
     color: #FFFFFF;
   }
 }
+
+@media (max-width: $xl) {
+  .consultation-btn {
+    width: 147px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
