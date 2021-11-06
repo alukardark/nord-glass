@@ -5,7 +5,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    &:first-of-type{
+    &:first-of-type {
       margin-bottom: 55px;
     }
   }
@@ -30,13 +30,15 @@
   }
   &__block {
     display: flex;
+    align-items: flex-start;
   }
   &__address {
     margin-right: 24px;
-    max-width: 230px;
+    max-width: 265px;
     font-weight: 500;
     line-height: 1.5;
     position: relative;
+    padding-left: 35px;
     &:before {
       content: '';
       background-position: center;
@@ -49,11 +51,13 @@
       width: 16px;
       height: 20px;
       position: absolute;
-      left: -38px;
-      top: 11px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   &__tel {
+    text-align: right;
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
@@ -78,11 +82,154 @@
   &__development {
     opacity: 0.6;
     color: $text-color;
-    a{
+    a {
       color: $text-color;
+      white-space: nowrap;
       &:hover {
         color: $text-color-2-dark;
       }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .footer {
+    padding: 55px 0 35px;
+    &__tel {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    a.footer__consultation-btn {
+      width: 205px;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .footer {
+    &__menu {
+      max-width: 425px;
+      a {
+        font-size: 16px;
+      }
+    }
+    &__tel {
+    }
+    a.footer__consultation-btn {
+    }
+    &__address {
+      margin-right: 10px;
+      max-width: 230px;
+    }
+    &__copy {
+      font-size: 14px;
+    }
+    &__privacy {
+      font-size: 14px;
+    }
+    &__development {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .footer {
+    padding: 40px 0 30px;
+    &__menu {
+      max-width: 425px;
+      a {
+        font-size: 16px;
+      }
+    }
+    &__block {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__address {
+      margin-right: 0px;
+      font-size: 14px;
+      text-align: right;
+      max-width: 180px;
+      margin-bottom: 25px;
+      padding-left: 20px;
+    }
+    &__tel {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    a.footer__consultation-btn {
+      width: 151px;
+      height: 36px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    &__row {
+      align-items: flex-start;
+    }
+    &__menu {
+      align-items: flex-start;
+      max-width: 350px;
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    &__address{
+
+    }
+    &__copy {
+      text-align: left;
+    }
+    &__privacy {
+      text-align: center;
+    }
+    &__development {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    padding: 50px 0 30px;
+    &__menu {
+      display: none;
+    }
+    &__row {
+      flex-direction: column;
+      &:first-of-type {
+        margin-bottom: 50px;
+      }
+    }
+    &__address {
+      max-width: 100%;
+      text-align: left;
+      padding-left: 25px;
+      margin-bottom: 15px;
+    }
+    &__tel {
+      margin-bottom: 15px;
+    }
+    &__block {
+      align-items: flex-start;
+    }
+    &__copy {
+      margin-bottom: 7px;
+      text-align: left;
+    }
+    &__privacy {
+      margin-bottom: 7px;
+      text-align: left;
+    }
+    &__development {
+      text-align: left;
     }
   }
 }

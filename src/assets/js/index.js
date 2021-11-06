@@ -17,6 +17,9 @@ import SimpleBar from 'simplebar';
 
 gsap.registerPlugin(ScrollTrigger);
 
+setTimeout(function () {
+    document.body.classList.add('active');
+}, 100);
 
 window.onload = function () {
     document.querySelectorAll('.grid').forEach(function (el) {
@@ -25,20 +28,41 @@ window.onload = function () {
 };
 
 var initialTimeout;
-
+var checkResize = true;
+var checkResize2 = true;
 $(window).resize(function () {
     if (window.matchMedia("(max-width: 989px)").matches) {
-        $('.header__mobile').css('transition', 'none');
-        $('.header__search-form').css('transition', 'none');
+        if (checkResize) {
+            checkResize = false;
 
-        clearTimeout(initialTimeout);
+            $('.header__mobile').css('transition', 'none');
+            $('.header__search-form').css('transition', 'none');
 
-        initialTimeout = setTimeout(function () {
-            $('.header__mobile').removeAttr('style');
-            $('.header__search-form').removeAttr('style');
-        }, 100);
+            clearTimeout(initialTimeout);
+
+            initialTimeout = setTimeout(function () {
+                $('.header__mobile').removeAttr('style');
+                $('.header__search-form').removeAttr('style');
+            }, 100);
+        }
+    } else {
+        if (!checkResize) {
+            checkResize = true;
+        }
+    }
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        if (checkResize2) {
+            checkResize2 = false;
+        }
+    } else {
+        if (!checkResize2) {
+            $('.collapse').addClass('show');
+            checkResize2 = true;
+        }
     }
 });
+
 
 $('.burger').click(function () {
     $('body').toggleClass('modal-open');
@@ -64,12 +88,7 @@ $(document).mouseup(function (e) {
     }
 });
 
-setTimeout(function () {
-    document.body.classList.add('active');
-}, 100);
-
 SVGInject(document.querySelectorAll(".produce img"));
-
 
 new Swiper('.main-documents .swiper', {
     loop: false,
@@ -111,7 +130,7 @@ new Swiper('.main-documents .swiper', {
 
 new Swiper('.main-clients .swiper', {
     loop: false,
-    spaceBetween: 53,
+    spaceBetween: 20,
     slidesPerView: 'auto',
     speed: 600,
     navigation: {
@@ -122,25 +141,25 @@ new Swiper('.main-clients .swiper', {
         1489: {
             spaceBetween: 53,
             loop: true,
-            slidesPerView: 5,
+            slidesPerView: 7,
         },
         1249: {
             spaceBetween: 53,
             loop: true,
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
         989: {
             spaceBetween: 53,
             loop: true,
-            slidesPerView: 4,
+            slidesPerView: 5,
         },
         767: {
-            spaceBetween: 53,
+            spaceBetween: 25,
             loop: false,
-            slidesPerView: 4,
+            slidesPerView: 5,
         },
         575: {
-            spaceBetween: 53,
+            spaceBetween: 20,
             loop: false,
             slidesPerView: 'auto',
         }
@@ -280,20 +299,6 @@ if (document.querySelector('.main-clients')) {
         opacity: "0",
     });
 }
-if (document.querySelector('.main-map__info')) {
-    gsap.from(".main-map__info", {
-        duration: 100,
-        scrollTrigger: {
-            trigger: ".main-map",
-            endTrigger: ".main-map",
-            scrub: 1.5,
-            start: "20px 100%",
-            end: "120px 100%",
-        },
-        x: -200,
-    });
-}
-
 if (document.querySelector('.main-map__init')) {
     gsap.from(".main-map__init", {
         duration: 100,
@@ -318,17 +323,14 @@ $("img[title].alignright").each(function () {
 $("img[title].aligncenter").each(function () {
     $(this).wrapAll($('<span class="aligncenter">'))
 });
-
 $("img[title]").each(function () {
     $(this).after($('<span class="img-desc">').html($(this).attr('title')));
 });
-
-
 $('a[href*="tel:"]').each(function () {
     $(this).attr('href', 'tel:' + $(this).text().replace(/\s/g, ''));
 });
-
 $('.inner-page table').wrap("<div class='scrollbar scrollbar--horizontal'></div>");
+
 document.querySelectorAll('.scrollbar').forEach(el => {
     new SimpleBar(el, {
         autoHide: false

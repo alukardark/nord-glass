@@ -117,12 +117,23 @@
       max-width: 212px;
       height: 308px;
     }
-    &__caption {
-      font-size: 18px;
+    &__item {
+      font-size: 20px;
     }
     &__wrap {
       padding-top: 80px;
       padding-bottom: 110px;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .main-documents {
+    &__item {
+      font-size: 18px;
+    }
+    &__caption {
+      margin: 20px 0px 0;
     }
   }
 }
@@ -138,6 +149,12 @@
         max-width: 300px;
         display: block;
       }
+    }
+    &__item {
+      font-size: 16px;
+    }
+    &__caption {
+      margin: 15px 0px 0;
     }
     &__img {
       max-width: 174px;
@@ -163,11 +180,17 @@
 
 @media (max-width: $sm) {
   .main-documents {
+    &__item{
+      font-size: 14px;
+    }
+    &__caption{
+      margin-top: 13px;
+    }
     &__wrap {
       padding-top: 50px;
       padding-bottom: 30px;
     }
-    &__title{
+    &__title {
       margin-bottom: 20px;
     }
   }

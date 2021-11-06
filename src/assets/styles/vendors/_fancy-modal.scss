@@ -33,7 +33,6 @@
 }
 
 .fancy-modal {
-  padding: 0;
   box-shadow: 0px 19px 40px rgba(35, 78, 98, 0.2);
   max-width: 845px;
   width: 100%;
@@ -83,12 +82,12 @@
     }
 
   }
-
   &__title {
     font-weight: bold;
     font-size: 32px;
     text-align: center;
     margin-bottom: 40px;
+    line-height: 1.2;
   }
   form {
     display: flex;
@@ -123,7 +122,7 @@
         background: $text-color-2-dark;
       }
     }
-    .wpcf7-response-output{
+    .wpcf7-response-output {
       font-size: 14px !important;
     }
   }
@@ -141,4 +140,38 @@
     }
   }
 
+}
+
+@media (max-width: $lg) {
+  .fancy-modal {
+    padding: 70px 60px 60px;
+  }
+}
+
+@media (max-width: $md) {
+  .fancy-modal {
+    padding: 60px 40px 40px;
+    &__title{
+      font-size: 26px;
+    }
+    form {
+      .wpcf7-response-output {
+        font-size: 12px !important;
+      }
+      input[type='text'], input[type='tel'], input[type='email'] {
+        font-size: 14px;
+      }
+      input[type='submit'], button {
+        width: 240px;
+        height: 52px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .fancy-modal {
+    padding: 60px 15px 40px;
+  }
 }

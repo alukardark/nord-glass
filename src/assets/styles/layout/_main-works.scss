@@ -1,7 +1,7 @@
 .main-works {
   overflow: hidden;
   padding: 0 !important;
-  &__title{
+  &__title {
     margin-bottom: 33px;
   }
   &__wrap {
@@ -22,5 +22,42 @@
     height: 100%;
     z-index: -1;
   }
+}
 
+@media (max-width: $xl) {
+  .main-works {
+    &__list {
+      a {
+        &:nth-of-type(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .main-works {
+    &__wrap {
+      padding-top: 65px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-works {
+    &__wrap {
+      padding-top: 44px;
+      padding-bottom: 20px;
+
+    }
+    &__list {
+      a {
+        &:nth-of-type(3) {
+          display: none;
+        }
+      }
+    }
+  }
 }

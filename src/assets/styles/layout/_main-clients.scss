@@ -1,6 +1,6 @@
 .main-clients {
   padding: 60px 0 105px;
-  &__title{
+  &__title {
     margin-bottom: 50px;
   }
   &__img {
@@ -10,5 +10,54 @@
     display: block;
     height: 94px;
   }
+}
 
+@media (max-width: $xl) {
+  .main-clients {
+    padding: 60px 0 80px;
+  }
+}
+
+@media (max-width: $lg) {
+  .main-clients {
+    overflow: hidden;
+    .swiper {
+      overflow: unset;
+      width: calc(100% + 30px);
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: -15px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main-clients {
+    padding: 50px 0 70px;
+    &__title {
+    }
+    .swiper-slide {
+    }
+    .slider-btn--bottom {
+    }
+    .swiper-slide {
+      width: 105px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-clients {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    &__title {
+      margin-bottom: 40px;
+    }
+    .swiper-slide {
+      width: 95px;
+    }
+    .slider-btn--bottom {
+      margin: 25px auto 0;
+    }
+  }
 }
